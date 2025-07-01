@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+/* Simple Print Styles for General Pages */
+@media print {
+  /* Hide everything first */
+  * {
+    visibility: hidden;
+  }
+  
+  /* Show only print content */
+  .print-show, .print-show * {
+    visibility: visible;
+  }
+  
+  /* Position print content */
+  .print-show {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    color: black;
+    background: white;
+  }
+}
+
+/* Production Planning Dashboard Print Styles */
+@media print {
+  /* Only target the print dialog specifically */
+  .MuiDialog-container:has(#print-content) * {
+    visibility: hidden;
+  }
+  
+  /* Show only print content */
+  #print-content,
+  #print-content * {
+    visibility: visible !important;
+  }
+  
+  /* Position print content */
+  #print-content {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 20px !important;
+    font-family: Arial, sans-serif !important;
+    font-size: 11pt !important;
+    color: black !important;
+    background: white !important;
+  }
+  
+  /* Hide dialog chrome */
+  .MuiDialog-paper {
+    box-shadow: none !important;
+    margin: 0 !important;
+    max-width: none !important;
+    max-height: none !important;
+    background: white !important;
+  }
+  
+  .MuiDialogTitle-root,
+  .MuiDialogActions-root {
+    display: none !important;
+  }
+  
+  .MuiDialogContent-root {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  /* Page breaks for each person assignment */
+  .page-break-after {
+    page-break-after: always !important;
+  }
+  
+  /* Production table formatting */
+  #print-content table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    margin-top: 10px !important;
+  }
+  
+  #print-content th,
+  #print-content td {
+    border: 1px solid #333 !important;
+    padding: 6px 8px !important;
+    text-align: left !important;
+  }
+  
+  #print-content th {
+    background-color: #f0f0f0 !important;
+    font-weight: bold !important;
+  }
+  
+  /* Typography */
+  #print-content h5 {
+    color: black !important;
+    margin: 0 0 8px 0 !important;
+    font-size: 16pt !important;
+  }
+  
+  #print-content .MuiTypography-subtitle1 {
+    color: black !important;
+    margin: 0 0 15px 0 !important;
+    font-size: 12pt !important;
+  }
+  
+  /* Signature area */
+  #print-content .signature-area {
+    margin-top: 20px !important;
+    font-size: 10pt !important;
+  }
+}
+
+
+ 
