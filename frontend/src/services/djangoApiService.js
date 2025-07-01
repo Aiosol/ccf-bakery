@@ -1,6 +1,6 @@
 // djangoApiService.js - Fixed version with missing delete method
 
-const DJANGO_API_URL = process.env.REACT_APP_DJANGO_API_URL || 'http://localhost:8000/api';
+const DJANGO_API_URL = process.env.REACT_APP_DJANGO_API_URL || 'https://ccf.aiosol.io/api/';
 
 /**
  * Service for making API calls to Django backend

@@ -1,6 +1,6 @@
 // frontend/src/services/productionApiService.js - FIXED with better error handling and data refresh
 
-const API_BASE_URL = process.env.REACT_APP_DJANGO_API_URL || 'http://localhost:8000/api';
+const API_BASE_URL = process.env.REACT_APP_DJANGO_API_URL || 'https://ccf.aiosol.io/api/';
 
 const productionApiService = {
   /**

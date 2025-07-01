@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 // API base URL
-const API_BASE_URL = 'http://localhost:8000/api';
+const API_BASE_URL = 'https://ccf.aiosol.io/api/';
 
 /**
  * Service for handling inventory-related API calls
